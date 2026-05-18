@@ -246,12 +246,12 @@ zaire_err_t zaire_systems_init(void){
 
     printf("device id: %s\n", x);
 
-    //init secondary devices (SPIFFS, GPIOs, Camera, etc...)
     if(zaire_systems_spiffs_init() != ZAIRE_OK)return ZAIRE_ERR;
     if(zaire_systems_gpio_btn_init() != ZAIRE_OK)return ZAIRE_ERR;
     if(zaire_systems_network_init() != ZAIRE_OK)return ZAIRE_ERR;
+    if(zaire_systems_i2c_init() != ZAIRE_OK)return ZAIRE_ERR;
     if(zaire_systems_i2s_init() != ZAIRE_OK)return ZAIRE_ERR;
-    //if(zaire_systems_uart_init() != ZAIRE_OK)return ZAIRE_ERR;
+    if(zaire_systems_uart_init() != ZAIRE_OK)return ZAIRE_ERR;
     return ZAIRE_OK;
 }
 
