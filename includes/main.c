@@ -55,6 +55,4 @@ void app_main(void)
     vTaskDelay(pdMS_TO_TICKS(10)); // Short delay to ensure all systems are up before proceeding
     //ALERT PWR ON
     init_beep();
-
-    printf("%d %d %d %d\n", gpio_get_level(PURPOSE_BTN), gpio_get_level(WALKIE_BTN), gpio_get_level(NXT_UP_BTN), gpio_get_level(PRV_DN_BTN));
 }
