@@ -40,3 +40,18 @@ The system is organized into independent firmware modules that communicate throu
 +--------------------------------------------------+
 |                  ESP-IDF / FreeRTOS              |
 +--------------------------------------------------+
+```
+
+
+# System Manager
+
+All systems are manage via flags and RTOS. Each button has its own xTaskCreate() following a flag logic.
+
+Zaire init via:
+* Initialize NVS and local file storage.
+* Load user and system configuration.
+* Initialize hardware interfaces.
+* Start FreeRTOS tasks.
+* Maintain system-level state.
+
+
