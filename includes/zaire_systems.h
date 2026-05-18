@@ -354,6 +354,13 @@ zaire_err_t zaire_systems_nvs_read_char(nvs_handle_t handle, const char *key, ch
 zaire_err_t zaire_systems_nvs_read_blob(nvs_handle_t handle, const char *key, void *out, size_t size);
 
 
+//ZAIRE I2C
+#define ZAIRE_I2C_NUM           I2S_NUM_0
+#define ZAIRE_I2C_SDA           //TBD
+#define ZAIRE_I2C_SCL           //TBD
+zaire_err_t zaire_systems_i2c_init(void);
+
+
 //ZAIRE UART
 #define ZAIRE_UART_BUF_SIZE     (1024)
 #define ZAIRE_BT_UART_BAUD      (9600)
