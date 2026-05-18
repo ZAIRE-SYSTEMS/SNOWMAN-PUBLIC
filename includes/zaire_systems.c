@@ -39,18 +39,18 @@
 
 
 #if DEV_BOARD == PROTOTYPE
-    uint8_t top_btn = GPIO_NUM_36;   // WALKIE
-    uint8_t bottom_btn = GPIO_NUM_39;// PURPOSE 
-    uint8_t front_btn =  GPIO_NUM_4;//TBD (maybe next/up)
-    uint8_t back_btn =  GPIO_NUM_15;//TBD  (maybe prev/down)
-    uint8_t rcv_test_board_mac_addr[6] = {0xC8, 0x2E, 0x18, 0xF1, 0x77, 0xD0}; //BREAD BOARD'S
+    uint8_t top_btn = REMOVED;   // WALKIE
+    uint8_t bottom_btn = REMOVED;// PURPOSE 
+    uint8_t front_btn =  REMOVED;//TBD (maybe next/up)
+    uint8_t back_btn =  REMOVED;//TBD  (maybe prev/down)
+    REMOVED
 
 #elif DEV_BOARD == BREAD
-   uint8_t top_btn = GPIO_NUM_32;
-    uint8_t bottom_btn = GPIO_NUM_33;//TBD;
-    uint8_t front_btn =  GPIO_NUM_25;
-    uint8_t back_btn =  GPIO_NUM_26;//TBD;
-    uint8_t rcv_test_board_mac_addr[6] = {0x8, 0xB6, 0x1F, 0xB9, 0xD2, 0xF8}; //ROTOTYPE'S
+   uint8_t top_btn = REMOVED;
+    uint8_t bottom_btn = REMOVED;//TBD;
+    uint8_t front_btn =  REMOVED;
+    uint8_t back_btn =  REMOVED;//TBD;
+    REMOVED
 
 #endif
 
