@@ -59,3 +59,59 @@ The public design lesson:
 ```txt
 Prototype hardware choices can change.
 Firmware architecture should expect that.
+The system is structured so Bluetooth audio behavior is accessed through an interface layer instead of being tightly coupled to a single module.
+```
+## Example abstraction:
+Application Layer
+      |
+      v
+Audio Manager
+      |
+      v
+Bluetooth Module Interface
+      |
+      v
+Selected Bluetooth Audio Hardware
+
+## Pre-Certified Module Strategy
+For future production planning, the system favors pre-certified wireless modules where practical.
+
+#### Why this matters
+Wireless products must be designed with regulatory requirements in mind. Using pre-certified modules can help reduce RF design risk and simplify the path toward compliance compared with designing a custom radio from scratch.
+This does not eliminate all certification responsibilities, but it can reduce risk during the transition from prototype to product.
+
+## Captive Portal Configuration
+Snowman uses a local web-based configuration portal instead of requiring a mobile app for initial setup.
+
+### Reasons for this decision
+* Reduces setup friction for users.
+* Avoids requiring app store installation for basic configuration.
+* Allows phone/laptop configuration over local Wi-Fi.
+* Keeps the MVP focused on firmware and device behavior.
+* Makes the system easier to test during development.
+
+# System-Level Wireless/Audio Separation
+The firmware treats wireless communication and audio control as separate responsibilities.
++-------------------------+
+| User Controls           |
++-----------+-------------+
+            |
+            v
++-------------------------+
+| Application State       |
++------+-----------+------+
+       |           |
+       v           v
++------------+  +----------------+
+| Walkie     |  | Audio Manager  |
+| Interface  |  |                |
++------------+  +----------------+
+       |           |
+       v           v
++------------+  +----------------+
+| ESP-NOW    |  | Bluetooth      |
+| Layer      |  | Audio Module   |
++------------+  +----------------+
+
+# Public Preview Note
+Exact command handling, pairing behavior, security logic, and production protocol details are intentionally excluded from this public repository.
