@@ -1,9 +1,3 @@
-
----
-
-# `docs/firmware_tasks.md`
-
-```md
 # Firmware Task Layout
 
 ## Overview
@@ -64,3 +58,16 @@ Example structure:
 +------------------+        +------------------+
 | Walkie Task      |        | Audio Task       |
 +------------------+        +------------------+
+```
+## System Initialization Flow
+
+At boot, the firmware follows a staged initialization process:
+1. Initialize logging
+2. Initialize NVS
+3. Load stored system settings
+4. Load stored user settings
+5. Mount local storage if required
+6. Initialize GPIO and peripherals
+7. Initialize wireless and audio modules
+8. Start application tasks
+9. Signal boot success
