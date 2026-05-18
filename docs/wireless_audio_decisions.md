@@ -92,26 +92,26 @@ Snowman uses a local web-based configuration portal instead of requiring a mobil
 
 # System-Level Wireless/Audio Separation
 The firmware treats wireless communication and audio control as separate responsibilities.
-+-------------------------+
-| User Controls           |
-+-----------+-------------+
-            |
-            v
-+-------------------------+
-| Application State       |
-+------+-----------+------+
-       |           |
-       v           v
-+------------+  +----------------+
-| Walkie     |  | Audio Manager  |
-| Interface  |  |                |
-+------------+  +----------------+
-       |           |
-       v           v
-+------------+  +----------------+
-| ESP-NOW    |  | Bluetooth      |
-| Layer      |  | Audio Module   |
-+------------+  +----------------+
++-------------------------+ <br/>
+| User Controls           | <br/>
++-----------+-------------+ <br/>
+            |<br/>
+            v<br/>
++-------------------------+<br/>
+| Application State       |<br/>
++------+-----------+------+<br/>
+       |           |<br/>
+       v           v<br/>
++------------+  +----------------+<br/>
+| Walkie     |  | Audio Manager  |<br/>
+| Interface  |  |                |<br/>
++------------+  +----------------+<br/>
+       |           |<br/>
+       v           v<br/>
++------------+  +----------------+<br/>
+| ESP-NOW    |  | Bluetooth      |<br/>
+| Layer      |  | Audio Module   |<br/>
++------------+  +----------------+<br/>
 
 # Public Preview Note
 Exact command handling, pairing behavior, security logic, and production protocol details are intentionally excluded from this public repository.
