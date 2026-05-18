@@ -2,6 +2,8 @@
 
 Smart communication system for winter helmets *(retrofit sleeve-based design)*
 
+### SEE /PROG/README.md for full project progress from start to current
+
 ---
 
 ## 🚀 Overview
