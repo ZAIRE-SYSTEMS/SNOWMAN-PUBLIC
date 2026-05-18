@@ -95,8 +95,8 @@ The firmware treats wireless communication and audio control as separate respons
 +-------------------------+ <br/>
 | User Controls           | <br/>
 +-----------+-------------+ <br/>
-            |<br/>
-            v<br/>
+           <t/> |<br/>
+            <t/>v<br/>
 +-------------------------+<br/>
 | Application State       |<br/>
 +------+-----------+------+<br/>
