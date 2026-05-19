@@ -56,6 +56,20 @@ The following schematic captures are included as public reference images for the
 
 > Note: Image paths assume this document lives in the `docs/` folder and schematic images live in `images/schem/`.
 
+## Real Hardware — Charging Board & Battery
+
+The following prototype photos show the Snowman power system being tested on real hardware, not only as schematic blocks.
+
+![TP4056 charger with 3200mAh battery](../images/schem/IMG_5155.jpeg)
+
+*TP4056-based charging board connected to a 3200 mAh, 3.7 V lithium battery. This is the actual charging and battery hardware used during Snowman prototype testing.*
+
+![Snowman board in powered standby state](../images/schem/IMG_5156.jpeg)
+
+*Snowman prototype hardware powered in standby/testing state. This photo shows the power system moving beyond schematic planning into physical board validation.*
+
+These photos are useful for portfolio review because they show that the power architecture moved beyond schematic planning into physical board testing.
+
 
 ## Main Power Components
 
@@ -82,6 +96,18 @@ Energy:          11.84 Wh
 This battery size was selected to support a wearable runtime target while keeping the system small enough for a ski/snowboarding retrofit form factor.
 
 The battery powers the system through the regulation and power-control stages. Firmware also monitors the battery level through the MAX17048 fuel gauge over I2C.
+
+## Battery Pack / Sleeve Visual Reference
+
+The battery is intended to support a wearable retrofit form factor, so physical placement and enclosure planning matter alongside the electrical design.
+
+| Visual Reference | Image |
+|---|---|
+| Battery sleeve 2D view | ![Battery sleeve 2D view](../images/schem/SLV-BAT-2D.png) |
+| Battery sleeve 3D view | ![Battery sleeve 3D view](../images/schem/SLV-BAT-3D.png) |
+
+> The `SLV-BAT-RAY.png` image is intentionally not embedded here to keep this page focused. It can remain in the repo as an additional visual reference if needed.
+
 
 ## USB-C Charging Input
 
