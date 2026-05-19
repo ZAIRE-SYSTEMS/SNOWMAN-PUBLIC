@@ -42,6 +42,21 @@ MAX17048 Fuel Gauge      LTC2954 Pushbutton Power Controller
 ESP32-S3 Main MCU ---> TPS62849 Buck Regulator ---> 3.3 V-class System Rail
 ```
 
+## Power Schematic References
+
+The following schematic captures are included as public reference images for the major power blocks. These images show the MVP-level circuit sections without exposing full manufacturing files, PCB layout data, Gerbers, or production validation details.
+
+| Power Block | Schematic Image |
+|---|---|
+| USB-C 5 V Input | ![USB-C 5 V Input](../images/schem/USB-C-5V-SHEM.png) |
+| Battery Charging | ![Battery Charging Schematic](../images/schem/BAT-CHR-SCH.png) |
+| Battery Monitoring | ![Battery Monitoring Schematic](../images/schem/BAT-MON-SCH.png) |
+| 3.3 V-Class Regulation | ![3.3 V Regulation Schematic](../images/schem/LDO-3V3-SCH.png) |
+| Pushbutton Power Sequencing | ![Power Sequencing Schematic](../images/schem/PWR-SQC-SCH.png) |
+
+> Note: Image paths assume this document lives in the `docs/` folder and schematic images live in `images/schem/`.
+
+
 ## Main Power Components
 
 | Component | Role |
@@ -70,6 +85,9 @@ The battery powers the system through the regulation and power-control stages. F
 
 ## USB-C Charging Input
 
+![USB-C 5 V Input](../images/schem/USB-C-5V-SHEM.png)
+
+
 Snowman uses USB-C as the charging input.
 
 The USB-C connector is configured as a sink-only device using pull-down resistors on the configuration channel pins:
@@ -84,6 +102,9 @@ This allows the USB-C source to detect the device as a sink and provide 5 V char
 For this MVP-stage design, USB-C is used for power input rather than high-speed data or USB Power Delivery negotiation. The design keeps charging simple and focused on safe, low-complexity battery recharge behavior.
 
 ## Battery Charging: TP4056-MS
+
+![Battery Charging Schematic](../images/schem/BAT-CHR-SCH.png)
+
 
 The TP4056-MS is used as the single-cell lithium battery charging IC.
 
@@ -102,6 +123,9 @@ Design notes:
 - Battery protection requirements should be reviewed for the final pack and production design.
 
 ## Pushbutton Power Control: LTC2954ITS8
+
+![Power Sequencing Schematic](../images/schem/PWR-SQC-SCH.png)
+
 
 The LTC2954ITS8 is used as the power on/off controller. It allows the device to be powered on or powered down using a physical button instead of relying only on firmware.
 
@@ -149,6 +173,9 @@ Public note: the exact timing should be verified against the final LTC2954 confi
 
 ## Battery Fuel Gauge: MAX17048G+T10
 
+![Battery Monitoring Schematic](../images/schem/BAT-MON-SCH.png)
+
+
 The MAX17048G+T10 is used to monitor the single-cell lithium battery over I2C.
 
 Design role:
@@ -189,6 +216,9 @@ Buzzer/indicator task plays low-battery alert
 This allows the system to provide simple but useful battery feedback without requiring a screen or phone app.
 
 ## Main Logic Regulation: TPS62849DLCR
+
+![3.3 V Regulation Schematic](../images/schem/LDO-3V3-SCH.png)
+
 
 The TPS62849DLCR is used to regulate the battery voltage into a stable logic rail for the ESP32-S3 and supporting electronics.
 
