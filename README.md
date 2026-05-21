@@ -3,6 +3,10 @@
 **Smart communication system for winter helmets and snow gear**  
 *Retrofit sleeve-based wearable communication platform*
 
+```
+CURRENT STATUS: CURRENTLY CUSTOM BUILDING A FEASYCOM bt1104 DEV BOARD FOR AUDIO TEST
+```
+
 ---
 
 ## 🚀 Overview
