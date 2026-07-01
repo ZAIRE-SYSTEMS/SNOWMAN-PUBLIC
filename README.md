@@ -4,7 +4,8 @@
 *Retrofit sleeve-based wearable communication platform*
 
 ```
-CURRENT STATUS: CURRENTLY CUSTOM BUILDING A FEASYCOM bt1104 DEV BOARD FOR AUDIO TEST
+CURRENT STATUS: CURRENTLY CUSTOM BUILDING A FULL PROTOTYPE USING BK3266 + ESP32D
+V1.1: Reduce complexity and only use 2 physical buttons.
 ```
 
 ---
